@@ -1,4 +1,5 @@
 using WebApi_Minimal.Domain.Services;
+using WebApi_Minimal.Domain.Services.Interfaces;
 using WebApi_Minimal.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Adicionando os serviço que serão injetados
+builder.Services.AddScoped<IPasswordManager, PasswordManager>();
 
 //Pesonalized Services
 builder.Services.AddScoped<PasswordManager>();

@@ -1,4 +1,5 @@
-﻿using WebApi_Minimal.Domain.Services;
+﻿using Microsoft.AspNetCore.Mvc;
+using WebApi_Minimal.Domain.Services.Interfaces;
 
 namespace WebApi_Minimal.Endpoints
 {
@@ -8,7 +9,14 @@ namespace WebApi_Minimal.Endpoints
         public static string[] Methods => new string[] { HttpMethod.Post.ToString() };
         public static Delegate Handle => Action;
 
-        public static bool Action(string password, PasswordManager passwordManager)
+        private readonly IPasswordManager _passwordManager;
+
+        public CheckPasswordPost(IPasswordManager passwordManager)
+        {
+            _passwordManager = passwordManager;
+        }
+
+        public static bool Action(string password, [FromServices] IPasswordManager passwordManager)
         {
             return passwordManager.CheckPassword(password);
         }
