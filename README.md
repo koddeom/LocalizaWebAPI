@@ -3,15 +3,15 @@
 
 Teste .Net Core / Node.js
 
-1	Propósito
+<b>1	Propósito</b> 
 
 O Objetivo do teste proposto é avaliar as competências técnicas dos candidatos a posições de Software Engineer da Unidas.
 
-2	O problema 
+<b>2	O problema</b> 
 Construa uma aplicação que exponha uma api web que valide se uma senha é válida.
 Você tem a liberdade de construir da maneira que julgar mais adequada, desde que se atente ao conjunto de regras e ao que se espera como entregável.
 
-2.1	Regras:
+<b>2.1	Regras:</b> 
 
 Escreva sua solução usando C# (.net core) ou Nodejs.
 
@@ -27,16 +27,16 @@ Para uma senha ser válida ela deve atender as seguintes regras:
 - Considere como especial os seguintes caracteres: !@#$%^&*()-+
 - Não possuir caracteres repetidos dentro do conjunto
 
-IsValid("") // false 
-IsValid("aa") // false 
-IsValid("ab") // false 
-IsValid("AAAbbbCc") // false 
-IsValid("AcZp7*baar") // false 
-IsValid("AcZp7*baAr") // false
-IsValid("AcZp7 bar") // false
-IsValid("AcZp7*bar") // true
+- IsValid("") // false 
+- IsValid("aa") // false 
+- IsValid("ab") // false 
+- IsValid("AAAbbbCc") // false 
+- IsValid("AcZp7*baar") // false 
+- IsValid("AcZp7*baAr") // false
+- IsValid("AcZp7 bar") // false
+- IsValid("AcZp7*bar") // true
 
-2.2	O que avaliaremos
+<b>2.2	O que avaliaremos</b>
 
 •	Testes de unidade / integração
 •	Abstração, acoplamento, extensibilidade e coesão
